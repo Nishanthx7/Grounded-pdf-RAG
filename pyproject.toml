@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-rag-system"
+version = "0.5.0"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.9,<3", "pypdf>=5,<7", "langchain-text-splitters>=1.1,<2", "langchain-core>=1.0,<2", "langchain-google-genai>=4.4,<5", "faiss-cpu>=1.8,<2", "numpy>=1.26", "python-dotenv>=1,<2", "streamlit>=1.50,<2"]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "pytest-mock>=3.12", "pypdf>=5", "faiss-cpu>=1.8", "numpy>=1.26"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+addopts = "-ra"
+markers = [
+    "implementation: acceptance tests for implemented and upcoming Step 5 services",
+    "integration: tests involving real external libraries, never a live API by default",
+    "live_api: explicitly opted-in real network tests (no tests enabled in V1)",
+]

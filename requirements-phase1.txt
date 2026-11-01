@@ -1,0 +1,7 @@
+# Phase 1 runtime + targeted processor test dependencies.
+# Use Python 3.11+ in a clean virtual environment.
+pydantic>=2.9,<3
+pypdf>=5,<7
+langchain-text-splitters>=1.1,<2
+pytest>=8
+pytest-mock>=3.12

@@ -1,0 +1,38 @@
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+.streamlit/
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Testing and build artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Temporary development files
+*.bak
+*.log
+diagnose_large_pdf_embeddings.py
+
+# Local uploads and generated data
+uploads/
+local_documents/
+outputs/
+
+# IDE
+.vscode/
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db

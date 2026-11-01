@@ -1,0 +1,12 @@
+# Python 3.11+; includes Phase 1, Phase 2, and offline test dependencies.
+pydantic>=2.9,<3
+pypdf>=5,<7
+langchain-text-splitters>=1.1,<2
+langchain-core>=1.0,<2
+langchain-google-genai>=4.4,<5
+faiss-cpu>=1.8,<2
+numpy>=1.26
+python-dotenv>=1,<2
+pytest>=8
+pytest-mock>=3.12
+streamlit>=1.50,<2
